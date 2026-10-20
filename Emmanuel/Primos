@@ -1,0 +1,20 @@
+//Emmanuel Roman Bañuelos
+/* codigo recursivo que sirve para identificar numeros primos*/
+public class Primos{
+	public static void main(String[] args) {
+		Boolean primo = esprimo(n:7,divisor:2);
+		System.out.println("El numero 7 es primo: "+ primo);
+		}
+		public static boolean esprimo(int n, int divisor){
+			if (n <= 1) {
+				return false;//los numeros menores o iguales a 1 no son primos
+			}
+			if (divisor *divisor >= n) {
+				return true;
+			}
+			if (n % divisor == 0) {
+				return false;
+			}
+			return esprimo( n , divisor +1);
+	}
+}
